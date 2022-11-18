@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Download Options for the link</title>
+
+		
+		
+	</head>
+	<body>
+		<div class="container">
+		      </iframe>
+        </div>
+        <div class="container">
+			<div class="btn-group">
+				<button
+					type="button"
+					class="btn btn-success dropdown-toggle"
+					data-toggle="dropdown"
+					aria-haspopup="true"
+					aria-expanded="false"
+				>
+					Download
+				</button>
+				<div class="dropdown-menu">
+					<% info.forEach((format) => { %>
+					<a class="dropdown-item" href="<%= format.url %>">
+						<%= format.mimeType.split(";")[0] %> <%= format.hasVideo
+						? format.height + "p" : "" %> <% if(!format.hasAudio) {
+						%>
+						<i class="fas fa-volume-mute text-danger"></i>
+						<% } %>
+					</a>
+					<% }); %>
+				</div>
+			</div>
+		</div>
+		</div>
+		<div class="container">
+			
+		</div>
+	</body>
+</html>
