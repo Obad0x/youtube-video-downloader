@@ -62,6 +62,10 @@
 				 font-size: 20px;
 				 /* padding: 40px; */
 			 }
+			 #mute{
+				color: #7531F8;
+				font-size: 30px;
+			 }
 			  button{
 				 width: 20%;
 				 height: 100%;
@@ -142,14 +146,20 @@
 				<div class="dropdown-menu">
 					<select id="Selector" name="Selector" >
 						<% info.forEach((format) => { %>
-							<hr>
+							<% if(format.hasAudio) {
+								%>
+								<hr>
 							<option id="video-option" value="<%= format.url %>">
 									<%= format.mimeType.split(";")[0] %> <%= format.hasVideo
 									? format.height + "p" : "" %> <% if(!format.hasAudio) {
 									%>
-									<i class="bi bi-volume-mute"></i>
+									<txt>🔇</txt>
+									
 									<% } %>
 							</option>
+								
+								<% } %>
+							
 						<% }); %>
 					</select>
 				
