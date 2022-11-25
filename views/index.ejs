@@ -4,25 +4,101 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100&display=swap" rel="stylesheet">
 		<title>Youtube Downloader</title>
-		
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+		<link href= "/public/assets/styles.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
-		<div >
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: 'Kanit', sans-serif;
+			}
+			h1{
+				margin: 0;
+				padding: 0;
+			}
+			p{
+				margin: 0;
+				padding: 0;
+			}
+			 body{
+				 background-color: #ebebeb;
+				 width: 100vw;
+				 height: 100vh;
+				 display: flex;
+				 justify-content: center;
+				 align-items: center;
+				 flex-direction: column;
+			 }
+			 .form-group{
+				width: 400px;
+				height: 50px;
+				background-color: rgba(225, 225, 225, 0.2);
+				padding: 0;
+				display: flex;
+				border: none;
+
+			 }
+			 .form-group input{
+				 width: 80%;
+				 height: 100%;
+				 color: #7531F8;
+				 background:none;
+				 border: 2px solid #7531F8;
+				 outline: none;
+				 padding: 0 10px;
+				 border-radius: 15px;
+				 margin: 0;
+				 border-right: none;
+				 border-bottom-right-radius: 0;
+				 border-top-right-radius: 0;
+				 font-size: 16px;
+
+			 }
+			 .form-group button{
+				 width: 20%;
+				 height: 100%;
+				 background: #7531F8;
+				 color: #ffffff;
+				 border: 1px solid #7531F8;
+				 outline: none;
+				 border-radius: 15px;
+				 margin: 0;
+				 font-size: 30px;
+				 border-bottom-left-radius: 0;
+				 border-top-left-radius: 0;
+				 transition: 0.5s ease all;
+			 }
+			 .form-group button:hover{
+				background-color: #f0f0f0;
+				color: #7531F8;
+			 }
+			 @media screen and (max-width: 480px) {
+			.form-group{
+				width: 100%;
+			 }
+			}	
+		</style>
+		<div>
+			<p>Simple</p>
 			<h1><strong>Youtube Downloader</strong></h1>
 			<form method="GET" action='/download' 
 				<div class="form-group">
-					<label for="videoURL"
-						>Video Link from Youtube</label
-					>
 					<input
 						type="text"
 						class="form-control"
 						placeholder="Enter Video URL"
                         name="url"
 					/>
+					<button type="submit" class="btn btn-primary"><i class="bi bi-download"></i></button>
 				</div>
-				<button type="submit" class="btn btn-primary">Download</button>
+				
 			</form>
 		</div>
 	</body>

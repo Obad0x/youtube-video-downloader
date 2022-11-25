@@ -5,17 +5,128 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Download Options for the link</title>
-
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100&display=swap" rel="stylesheet">
 		
 		
 	</head>
 	<body>
-		<div class="container">
-		      </iframe>
-        </div>
-        <div class="container">
-			<div class="btn-group">
-				<button
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: 'Kanit', sans-serif;
+			}
+			 body{
+				 background-color: #f0f0f0;
+				 width: 100vw;
+				 height: 100vh;
+				 display: flex;
+				 justify-content: center;
+				 align-items: center;
+				 flex-direction: column;
+			
+			 }
+			 select{
+				 width: 80%;
+				 height: 100%;
+				 color: #7531F8;
+				 background:none;
+				 border: 1px solid #7531F8;
+				 outline: none;
+				 padding: 0 10px;
+				 border-radius: 15px;
+				 margin: 0;
+				 border-right: none;
+				 border-bottom-right-radius: 0;
+				 border-top-right-radius: 0;
+				 font-size: 16px;
+			 }
+			 h1,p{
+				width: 400px;
+			 }
+			 .dropdown-menu{
+				width: 400px;
+				height: 50px;
+				background-color: rgba(225, 225, 225, 0.2);
+				padding: 0;
+				display: flex;
+				border: none;
+				margin: 0;
+			 }
+			 a{
+				 color: #7531F8;
+				 margin: 10px;
+				 font-size: 20px;
+				 /* padding: 40px; */
+			 }
+			 #mute{
+				color: #7531F8;
+				font-size: 30px;
+			 }
+			  button{
+				 width: 20%;
+				 height: 100%;
+				 background: #7531F8;
+				 color: #ffffff;
+				 border: 1px solid #7531F8;
+				 outline: none;
+				 border-radius: 15px;
+				 margin: 0;
+				 font-size: 30px;
+				 border-bottom-left-radius: 0;
+				 border-top-left-radius: 0;
+				 transition: 0.5s ease all;
+			 }
+			
+			  button:hover{
+				background-color: #f0f0f0;
+				color: #7531F8;
+			 }
+			 .cont{
+				width: 400px;
+				max-width: 400px;
+				height: fit-content;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-bottom: 15px;
+			 }
+			 #embed-video{
+				margin: 0;
+				padding: 0;
+				border-radius: 15px;
+				
+				object-fit: contain;
+			 }
+			 @media screen and (max-width: 480px) {
+			.dropdown-menu{
+				width: 90%;
+			 }
+			 h1,p{
+				width: 90%;
+			 }
+			 #embed-video{
+				width: 90%;
+				
+			 }
+			 .cont{
+				width: 90%;
+				max-width: 90%;
+				height: fit-content;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				
+			 }
+			}	
+		</style>
+	
+      
+		
+				<!-- <button
 					type="button"
 					class="btn btn-success dropdown-toggle"
 					data-toggle="dropdown"
@@ -23,23 +134,62 @@
 					aria-expanded="false"
 				>
 					Download
-				</button>
-				<div class="dropdown-menu">
-					<% info.forEach((format) => { %>
-					<a class="dropdown-item" href="<%= format.url %>">
-						<%= format.mimeType.split(";")[0] %> <%= format.hasVideo
-						? format.height + "p" : "" %> <% if(!format.hasAudio) {
-						%>
-						<i class="fas fa-volume-mute text-danger"></i>
-						<% } %>
-					</a>
-					<% }); %>
+				</button> -->
+				<p style="text-align: left;">Simple</p>
+				<h1 style="text-align: left;"><strong>Youtube Downloader</strong></h1>
+				<div class="cont">
+					<video id="embed-video" width="400" controls>
+						<source id="video-src" src="" type="video/mp4">
+					  </video>
 				</div>
-			</div>
-		</div>
-		</div>
-		<div class="container">
+
+				<div class="dropdown-menu">
+					<select id="Selector" name="Selector" >
+						<% info.forEach((format) => { %>
+							<% if(format.hasAudio) {
+								%>
+								<hr>
+							<option id="video-option" value="<%= format.url %>">
+									<%= format.mimeType.split(";")[0] %> <%= format.hasVideo
+									? format.height + "p" : "" %> <% if(!format.hasAudio) {
+									%>
+									<txt>🔇</txt>
+									
+									<% } %>
+							</option>
+								
+								<% } %>
+							
+						<% }); %>
+					</select>
+				
+					<button onclick="downloadVideo()"><i class="bi bi-download"></i></button>
+				</div>
+
 			
-		</div>
+		
+	
+		<script>
+			
+			var selector = document.getElementById("Selector"); 
+			var video = document.getElementById('embed-video');
+			var source = document.getElementById('video-src');
+			loadvideo();
+			selector.addEventListener("change", () => {
+				//alert(selector.value);
+				loadvideo();
+			});
+			function downloadVideo()
+			{
+				window.open(selector.value,"_blank")
+			}
+			function loadvideo() {
+  				video.pause()
+  				source.src = selector.value;
+ 				video.load();
+ 				video.play();
+			}
+			
+		</script>
 	</body>
 </html>

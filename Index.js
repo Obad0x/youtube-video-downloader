@@ -23,7 +23,7 @@ app.get("/download", async (req, res) => {
 	});
 });
 
-
+app.use('/public', express.static('public'));
 
 app.listen(port, ()=>{
   console.log(`Server Started`);
