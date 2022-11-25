@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": "12.x"
+    "node": "16.x"
   },                                
   
   "scripts": {
@@ -13,7 +13,7 @@
     
   },
   "keywords": [],
-  "author": "",
+  "author": "engnrobad",
   "license": "ISC",
   "dependencies": {
     "@types/node": "^18.0.6",
