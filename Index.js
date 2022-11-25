@@ -6,8 +6,12 @@ const PORT = process.env.PORT || 3030;
 
 app.set('view engine', 'ejs');
 
+
+app.use('/public', express.static('public'));
+
+
 app.get('/', (req,res)=>{
-  res.render('index')
+  res.render('index');
 })
 
 app.get("/download", async (req, res) => {
@@ -23,7 +27,7 @@ app.get("/download", async (req, res) => {
 	});
 });
 
-app.use('/public', express.static('public'));
+
 
 app.listen(PORT, ()=>{
   console.log(`Server Started`);
