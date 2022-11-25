@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "12.x"
+  },                                
   
   "scripts": {
   
-    "start": "node index.js",
+    "start": "node index.js"
     
   },
   "keywords": [],
