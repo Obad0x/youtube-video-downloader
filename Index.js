@@ -8,6 +8,7 @@ app.set('view engine', 'ejs');
 
 
 app.use('/public', express.static('public'));
+app.set('views', path.join(__dirname, '/Views'));
 
 
 app.get('/', (req,res)=>{
