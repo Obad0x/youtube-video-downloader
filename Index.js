@@ -2,7 +2,7 @@
 const express = require ('express');
 const app = express();
 const ytdl = require("ytdl-core");
-const port = 3000;
+const PORT = process.env.PORT || 3030;
 
 app.set('view engine', 'ejs');
 
@@ -25,7 +25,7 @@ app.get("/download", async (req, res) => {
 
 app.use('/public', express.static('public'));
 
-app.listen(port, ()=>{
+app.listen(PORT, ()=>{
   console.log(`Server Started`);
 });
 
