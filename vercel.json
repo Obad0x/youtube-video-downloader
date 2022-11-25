@@ -2,9 +2,9 @@
    "version": 2,
    "name": "youtube-video-downloader",
    "builds": [
-      { "src": "index.js", "use": "@vercel/node" }
+      { "src": "Index.js", "use": "@vercel/node" }
    ],
    "routes": [
-      { "src": "/(.*)", "dest": "/index.js" }
+      { "src": "/(.*)", "dest": "/Index.js" }
    ]
 }
