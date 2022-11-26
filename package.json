@@ -9,7 +9,8 @@
   
   "scripts": {
   
-    "start": "node index.js"
+    "start": "node Index.js"
+
     
   },
   "keywords": [],

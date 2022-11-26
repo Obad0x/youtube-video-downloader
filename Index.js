@@ -2,7 +2,8 @@
 const express = require ('express');
 const app = express();
 const ytdl = require("ytdl-core");
-const path = require('path')
+const path = require('path');
+const fs = require('fs');
 const PORT = process.env.PORT || 5000;
 
 app.set('view engine', 'ejs');
