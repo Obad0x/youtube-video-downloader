@@ -1,17 +1,13 @@
 {
   "name": "nodejs",
   "version": "1.0.0",
-  "description": "",
+  "description": "Youtube vide downloader using nodejs",
   "main": "index.js",
   "engines": {
     "node": "16.x"
-  },                                
-  
+  },
   "scripts": {
-  
     "start": "node Index.js"
-
-    
   },
   "keywords": [],
   "author": "engnrobad",
@@ -23,5 +19,14 @@
     "node-fetch": "^3.2.6",
     "nodemon": "^2.0.20",
     "ytdl-core": "^4.11.2"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/obaddabo/youtube-video-downloader.git"
+  },
+  "bugs": {
+    "url": "https://github.com/obaddabo/youtube-video-downloader/issues"
+  },
+  "homepage": "https://github.com/obaddabo/youtube-video-downloader#readme"
 }
