@@ -11,6 +11,7 @@
       "dependencies": {
         "@types/node": "^18.0.6",
         "ejs": "^3.1.8",
+        "ejs-locals": "^1.0.2",
         "express": "^4.18.2",
         "node-fetch": "^3.2.6",
         "nodemon": "^2.0.20",
@@ -300,6 +301,23 @@
       "engines": {
         "node": ">=0.10.0"
       }
+    },
+    "node_modules/ejs-locals": {
+      "version": "1.0.2",
+      "resolved": "https://registry.npmjs.org/ejs-locals/-/ejs-locals-1.0.2.tgz",
+      "integrity": "sha512-gzMyYHoVMcaT30zwd0z69HEthp5c2czMLWCaMh+K+BfogvxrG6smZHLW3Uwn2+6XhE+/aCcEL8pETZ9fa1J24A==",
+      "dependencies": {
+        "ejs": "0.8.x"
+      },
+      "engines": {
+        "node": ">=0.6.0"
+      }
+    },
+    "node_modules/ejs-locals/node_modules/ejs": {
+      "version": "0.8.8",
+      "resolved": "https://registry.npmjs.org/ejs/-/ejs-0.8.8.tgz",
+      "integrity": "sha512-2E5HBH8LoaSQ2OLW2LmEE1/9dL3YZCKqrQXBEeCv9P/dQlZOfdAYvJFHhNZ35uY6AXba+RllQTRtmJmXXm7i7g==",
+      "deprecated": "Critical security bugs fixed in 2.5.5"
     },
     "node_modules/encodeurl": {
       "version": "1.0.2",
@@ -1377,6 +1395,21 @@
       "integrity": "sha512-/sXZeMlhS0ArkfX2Aw780gJzXSMPnKjtspYZv+f3NiKLlubezAHDU5+9xz6gd3/NhG3txQCo6xlglmTS+oTGEQ==",
       "requires": {
         "jake": "^10.8.5"
+      }
+    },
+    "ejs-locals": {
+      "version": "1.0.2",
+      "resolved": "https://registry.npmjs.org/ejs-locals/-/ejs-locals-1.0.2.tgz",
+      "integrity": "sha512-gzMyYHoVMcaT30zwd0z69HEthp5c2czMLWCaMh+K+BfogvxrG6smZHLW3Uwn2+6XhE+/aCcEL8pETZ9fa1J24A==",
+      "requires": {
+        "ejs": "0.8.x"
+      },
+      "dependencies": {
+        "ejs": {
+          "version": "0.8.8",
+          "resolved": "https://registry.npmjs.org/ejs/-/ejs-0.8.8.tgz",
+          "integrity": "sha512-2E5HBH8LoaSQ2OLW2LmEE1/9dL3YZCKqrQXBEeCv9P/dQlZOfdAYvJFHhNZ35uY6AXba+RllQTRtmJmXXm7i7g=="
+        }
       }
     },
     "encodeurl": {

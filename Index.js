@@ -2,9 +2,10 @@
 const express = require ('express');
 const app = express();
 const ytdl = require("ytdl-core");
-const path = require('path');
-const fs = require('fs');
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
+const engine = require('ejs-locals')
+
+app.engine('ejs', engine);
 
 app.set('view engine', 'ejs');
 
