@@ -1,8 +1,8 @@
 {
   "name": "nodejs",
   "version": "1.0.0",
-  "description": "Youtube vide downloader using nodejs",
-  "main": "index.js",
+  "description": "Youtube video downloader using nodejs",
+  "main": "Index.js",
   "engines": {
     "node": "16.x"
   },
