@@ -11,11 +11,11 @@ app.set('view engine', 'ejs');
 
 
 app.use('/public', express.static('public'));
-app.set('views', 'Views');
+app.set('views', 'views');
 
 
 app.get('/', (req,res)=>{
-  res.render('index');
+  res.render('index.ejs');
 })
 
 app.get("/download", async (req, res) => {
